@@ -95,18 +95,15 @@ def get_post_json(post_json):
         data = json.loads(res["data"])
         # print(data)
         post_dict = {
-            "areaStr": data['areaStr'],
-            "deptStr": data['deptStr'],
-            "deptid": data['deptStr']['deptid'] if data['deptStr'] else None,
+            "areaStr": "{\"address\":\"雍悦豪苑\",\"text\":\"广东省-汕尾市-海丰县\",\"code\":\"441521\"}",
+            "deptStr": {"text":"建筑信息系（学生）-数字媒体应用技术-数字媒体应用技术19级2班"},"deptid":118922,
             "customerid": data['customerid'],
             "userid": data['userid'],
             "username": data['username'],
-            "stuNo": data['stuNo'],
-            "phonenum": data["phonenum"],
-            "templateid": data["templateid"],
-            "updatainfo": [
-                {"propertyname": i["propertyname"], "value": i["value"]}
-                for i in data["cusTemplateRelations"]
+            "stuNo": "1904160223",
+            "phonenum": data['phonenum'],
+            "templateid": data['templateid'],
+            "updatainfo": [{"propertyname":"temperature","value":"36.2"},{"propertyname":"sfwz2","value":"否"},{"propertyname":"isConfirmed","value":"否"},{"propertyname":"isdefinde","value":"否"},{"propertyname":"jtcy","value":"否"},{"propertyname":"isGoWarningAdress","value":"否"},{"propertyname":"isTouch","value":"否"},{"propertyname":"isTransitArea","value":"健康良好"},{"propertyname":"isTransitProvince","value":"否"},{"propertyname":"age","value":""},{"propertyname":"isFFHasSymptom","value":"否"},{"propertyname":"assphonenum","value":""},{"propertyname":"ownPhone","value":"15218133777"},{"propertyname":"emergencyContact","value":"13729523999"}], for i in data["cusTemplateRelations"]
             ],
             "updatainfo_detail": [
                 {
