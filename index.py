@@ -95,13 +95,13 @@ def get_post_json(post_json):
         data = json.loads(res["data"])
         # print(data)
         post_dict = {
-            "areaStr": data['areaStr'],
-            "deptStr": data['deptStr'],
-            "deptid": data['deptStr']['deptid'] if data['deptStr'] else None,
+            "areaStr": "{\"address\":\"雍悦豪苑\",\"text\":\"广东省-汕尾市-海丰县\",\"code\":\"441521\"}",
+            "deptStr": {"text":"建筑信息系（学生）-数字媒体应用技术-数字媒体应用技术19级2班","deptid":118922},
+            "deptid": 118922,
             "customerid": data['customerid'],
             "userid": data['userid'],
             "username": data['username'],
-            "stuNo": data['stuNo'],
+            "stuNo": "1904160223",
             "phonenum": data["phonenum"],
             "templateid": data["templateid"],
             "updatainfo": [
