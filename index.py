@@ -103,7 +103,10 @@ def get_post_json(post_json):
             "stuNo": "1904160223",
             "phonenum": data['phonenum'],
             "templateid": data['templateid'],
-            "updatainfo": data['updatainfo'],
+            "updatainfo": [
+                {"propertyname": i["propertyname"], "value": i["value"]}
+                for i in data["cusTemplateRelations"]
+            ],
             "updatainfo_detail": [
                 {
                     "propertyname": i["propertyname"],
