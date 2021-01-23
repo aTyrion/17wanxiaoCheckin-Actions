@@ -103,8 +103,7 @@ def get_post_json(post_json):
             "stuNo": "1904160223",
             "phonenum": data['phonenum'],
             "templateid": data['templateid'],
-            "updatainfo": [{"propertyname":"temperature","value":"36.2"},{"propertyname":"sfwz2","value":"否"},{"propertyname":"isConfirmed","value":"否"},{"propertyname":"isdefinde","value":"否"},{"propertyname":"jtcy","value":"否"},{"propertyname":"isGoWarningAdress","value":"否"},{"propertyname":"isTouch","value":"否"},{"propertyname":"isTransitArea","value":"健康良好"},{"propertyname":"isTransitProvince","value":"否"},{"propertyname":"age","value":""},{"propertyname":"isFFHasSymptom","value":"否"},{"propertyname":"assphonenum","value":""},{"propertyname":"ownPhone","value":"15218133777"},{"propertyname":"emergencyContact","value":"13729523999"}], for i in data["cusTemplateRelations"]
-            ],
+            "updatainfo": data['updatainfo'],
             "updatainfo_detail": [
                 {
                     "propertyname": i["propertyname"],
